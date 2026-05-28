@@ -43,24 +43,24 @@ _MAP_INDEX_MAX   =  9
 
 _MAP = [
     # gun 1
-    evdev.ecodes.KEY_LEFT,         evdev.ecodes.KEY_RIGHT,
-    evdev.ecodes.KEY_DOWN,         evdev.ecodes.KEY_UP,
-    evdev.ecodes.KEY_1,            evdev.ecodes.KEY_5,
-    evdev.ecodes.KEY_LEFTALT,      evdev.ecodes.KEY_B,
-    evdev.ecodes.KEY_LEFTSHIFT,
-
-    # gun 2
     evdev.ecodes.KEY_D,            evdev.ecodes.KEY_G,
     evdev.ecodes.KEY_F,            evdev.ecodes.KEY_R,
     evdev.ecodes.KEY_2,            evdev.ecodes.KEY_6,
-    evdev.ecodes.KEY_S,            evdev.ecodes.KEY_Q,
+    evdev.ecodes.KEY_1,            evdev.ecodes.KEY_Q,
     evdev.ecodes.KEY_W,
 
+    # gun 2
+    evdev.ecodes.KEY_LEFT,         evdev.ecodes.KEY_RIGHT,
+    evdev.ecodes.KEY_DOWN,         evdev.ecodes.KEY_UP,
+    evdev.ecodes.KEY_ENTER,            evdev.ecodes.KEY_Z,
+    evdev.ecodes.KEY_X,      evdev.ecodes.KEY_B,
+    evdev.ecodes.KEY_LEFTSHIFT,
+    
     # gun 3
     evdev.ecodes.KEY_J,            evdev.ecodes.KEY_L,
     evdev.ecodes.KEY_K,            evdev.ecodes.KEY_I,
     evdev.ecodes.KEY_3,            evdev.ecodes.KEY_7,
-    evdev.ecodes.KEY_RIGHTSHIFT,   evdev.ecodes.KEY_ENTER,
+    evdev.ecodes.KEY_RIGHTSHIFT,   evdev.ecodes.KEY_5,
     evdev.ecodes.KEY_KP1,
 
     # gun 4
@@ -98,7 +98,7 @@ class VirtualGunDevice(object):
                 evdev.ecodes.KEY_ENTER,  # b + plus
                 evdev.ecodes.KEY_ESC,    # b + minus
                 evdev.ecodes.KEY_TAB,    # b + home
-                evdev.ecodes.KEY_SPACE,  # b + 1
+                evdev.ecodes.KEY_DOT,  # b + 1
                 evdev.ecodes.KEY_2,      # b + 2
             ] + _MAP,
             evdev.ecodes.EV_ABS: [
